@@ -55,6 +55,7 @@ You can integrate ScreenConnect with the x86 version of your MDT boot disk (x86 
 1.	Open the **Unattend_PE_x86.xml** template from the installation location, typically "%ProgramFiles%\Microsoft Deployment Toolkit\Templates\Unattend_PE_x86.xml"
 2.	Modify the **RunSynchronous** section, example:
 
+	```xml
 	<RunSynchronous>
 		<RunSynchronousCommand wcm:action="add">
 			<Description>ConnectWise Control Client</Description>
@@ -67,6 +68,7 @@ You can integrate ScreenConnect with the x86 version of your MDT boot disk (x86 
 			<Path>wscript.exe X:\Deploy\Scripts\LiteTouch.wsf</Path>
 		</RunSynchronousCommand>
 	</RunSynchronous>
+	```
 
 *Note: Make sure you change the Order for the Lite Touch PE to "2"*
 
